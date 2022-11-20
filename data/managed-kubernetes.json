@@ -1,0 +1,19 @@
+{
+    "id": "managed-kubernetes",
+    "title": "Managed Kubernetes",
+    "description": "Hassle-free Kubernetes clusters so you can focus on your business.",
+    "items": [
+        {
+            "id": "aks",
+            "title": "Azure Kubernetes Service"
+        },
+        {
+            "id": "gcp",
+            "title": "Google Kubernetes Engine"
+        },
+        {
+            "id": "eks",
+            "title": "Elastic Kubernetes Service"
+        }
+    ]
+}

@@ -5,16 +5,7 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import { useState } from 'react';
-
-const demos = [
-    {
-        name: 'Managed Kubernetes',
-        items: [{
-            name: "AKS",
-            slug: '/aks'
-        }]
-    }
-]
+import {AllTopics, Topic } from '../data';
 
 export function GlobalNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +20,7 @@ export function GlobalNav() {
           onClick={close}
         >
           <h2 className="font-medium tracking-wide text-gray-300 group-hover:text-gray-50">
-            App Directory <span className="Work in progress">(WIP)</span>
+            Kubedir
           </h2>
         </Link>
       </div>
@@ -54,19 +45,11 @@ export function GlobalNav() {
           hidden: !isOpen,
         })}
       >
-        <nav className="space-y-6 px-2 py-5">
-          {demos.map((section) => {
+        <nav className="px-1">
+          {AllTopics.map((topic) => {
             return (
-              <div key={section.name}>
-                <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-600">
-                  <div>{section.name}</div>
-                </div>
-
-                <div className="space-y-1">
-                  {section.items.map((item) => (
-                    <GlobalNavItem key={item.slug} item={item} close={close} />
-                  ))}
-                </div>
+              <div key={topic.id} className="space-y-1">
+                <GlobalNavItem topic={topic} close={close} />
               </div>
             );
           })}
@@ -77,19 +60,19 @@ export function GlobalNav() {
 }
 
 function GlobalNavItem({
-  item,
+  topic,
   close,
 }: {
-  item: { name: string; slug: string };
+  topic: Topic
   close: () => false | void;
 }) {
   const segment = useSelectedLayoutSegment();
-  const isActive = item.slug === segment;
+  const isActive = topic.id === segment;
 
   return (
     <Link
       onClick={close}
-      href={`/${item.slug}`}
+      href={`/topics/${topic.id}`}
       className={clsx(
         'block rounded-md px-3 py-2 text-sm font-medium  hover:text-gray-300',
         {
@@ -98,7 +81,7 @@ function GlobalNavItem({
         },
       )}
     >
-      {item.name}
+      {topic.title}
     </Link>
   );
 }
