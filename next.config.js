@@ -6,6 +6,6 @@ const nextConfig = {
     // Required:
     appDir: true,
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

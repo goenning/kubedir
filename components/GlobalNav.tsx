@@ -1,15 +1,15 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import clsx from 'clsx';
-import { useState } from 'react';
-import {AllTopics, Topic } from '../data';
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
+import clsx from 'clsx'
+import { useState } from 'react'
+import { AllTopics, Topic } from '../data'
 
 export function GlobalNav() {
-  const [isOpen, setIsOpen] = useState(false);
-  const close = () => setIsOpen(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const close = () => setIsOpen(false)
 
   return (
     <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-r lg:border-gray-800">
@@ -48,12 +48,12 @@ export function GlobalNav() {
               <div key={topic.id} className="space-y-1">
                 <GlobalNavItem topic={topic} close={close} />
               </div>
-            );
+            )
           })}
         </nav>
       </div>
     </div>
-  );
+  )
 }
 
 function GlobalNavItem({
@@ -61,11 +61,11 @@ function GlobalNavItem({
   close,
 }: {
   topic: Topic
-  close: () => false | void;
+  close: () => false | void
 }) {
-  const pathName = usePathname();
+  const pathName = usePathname()
   const href = `/topics/${topic.id}`
-  const isActive = href === pathName;
+  const isActive = href === pathName
 
   return (
     <Link
@@ -76,10 +76,10 @@ function GlobalNavItem({
         {
           'text-gray-500 hover:bg-gray-800': !isActive,
           'text-gray-200': isActive,
-        },
+        }
       )}
     >
       {topic.title}
     </Link>
-  );
+  )
 }
