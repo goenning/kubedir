@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import { GlobalNav } from '../components/GlobalNav'
+import Script from 'next/script'
 
 export default function RootLayout({
   children,
@@ -9,6 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
+      <Script type="text/javascript" src="/p.js" data-api="/e" />
       <body className="overflow-y-scroll">
         <GlobalNav />
 
