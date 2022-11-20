@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useSelectedLayoutSegment } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import { useState } from 'react';
@@ -29,9 +29,6 @@ export function GlobalNav() {
         className="group absolute right-0 top-0 flex h-14 items-center space-x-2 px-4 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className="font-medium text-gray-100 group-hover:text-gray-400">
-          Menu
-        </div>
         {isOpen ? (
           <XMarkIcon className="block w-6 text-gray-300" />
         ) : (
@@ -45,7 +42,7 @@ export function GlobalNav() {
           hidden: !isOpen,
         })}
       >
-        <nav className="px-1">
+        <nav className="px-1 py-1">
           {AllTopics.map((topic) => {
             return (
               <div key={topic.id} className="space-y-1">
@@ -66,13 +63,14 @@ function GlobalNavItem({
   topic: Topic
   close: () => false | void;
 }) {
-  const segment = useSelectedLayoutSegment();
-  const isActive = topic.id === segment;
+  const pathName = usePathname();
+  const href = `/topics/${topic.id}`
+  const isActive = href === pathName;
 
   return (
     <Link
       onClick={close}
-      href={`/topics/${topic.id}`}
+      href={href}
       className={clsx(
         'block rounded-md px-3 py-2 text-sm font-medium  hover:text-gray-300',
         {
