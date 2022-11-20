@@ -7,9 +7,11 @@ export type Topic = {
   id: string
   title: string
   description: string
+  items: Array<TopicItem>
 }
 
 export type TopicItem = {
   id: string
   title: string
+  url: string
 }

@@ -1,5 +1,22 @@
 {
   "id": "kubernetes-distributions",
   "title": "Kubernetes Distributions",
-  "description": "Looking for something simpler? There are many Kubernetes distributions to choose from."
+  "description": "Did you know there are many Kubernetes distributions to choose from?",
+  "items": [
+    {
+      "id": "k8s",
+      "title": "Kubernetes",
+      "url": "https://kubernetes.io"
+    },
+    {
+      "id": "k3s",
+      "title": "K3S",
+      "url": "https://k3s.io"
+    },
+    {
+      "id": "microk8s",
+      "title": "microk8s",
+      "url": "https://microk8s.io"
+    }
+  ]
 }

@@ -4,16 +4,34 @@
   "description": "Hassle-free Kubernetes clusters so you can focus on your business.",
   "items": [
     {
-      "id": "aks",
-      "title": "Azure Kubernetes Service"
-    },
-    {
       "id": "gcp",
-      "title": "Google Kubernetes Engine"
+      "title": "Google Kubernetes Engine",
+      "url": "https://cloud.google.com/kubernetes-engine"
     },
     {
       "id": "eks",
-      "title": "Elastic Kubernetes Service"
+      "title": "Elastic Kubernetes Service",
+      "url": "https://aws.amazon.com/eks"
+    },
+    {
+      "id": "aks",
+      "title": "Azure Kubernetes Service",
+      "url": "https://azure.microsoft.com/en-us/services/kubernetes-service"
+    },
+    {
+      "id": "doks",
+      "title": "Digital Ocean Kubernetes",
+      "url": "https://www.digitalocean.com/products/kubernetes"
+    },
+    {
+      "id": "lke",
+      "title": "Linode Kubernetes Engine",
+      "url": "https://www.linode.com/products/kubernetes"
+    },
+    {
+      "id": "kapsule",
+      "title": "Scaleway Kubernetes Kapsule",
+      "url": "https://www.scaleway.com/en/kubernetes-kapsule"
     }
   ]
 }

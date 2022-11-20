@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
@@ -12,16 +13,21 @@ export function GlobalNav() {
   const close = () => setIsOpen(false)
 
   return (
-    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-r lg:border-gray-800">
+    <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-200 bg-white lg:bottom-0 lg:z-auto lg:w-72 lg:border-r">
       <div className="flex h-14 items-center py-4 px-4 lg:h-auto">
         <Link
           href="/"
           className="group flex w-full items-center space-x-2.5"
           onClick={close}
         >
-          <h2 className="font-medium tracking-wide text-gray-300 group-hover:text-gray-50">
-            Kubedir
-          </h2>
+          <Image
+            width={70}
+            height={80}
+            className="w-8 object-contain"
+            src="/logo.png"
+            alt="Kubedir Logo"
+          />
+          <h2 className="font-medium tracking-wide">Kubedir</h2>
         </Link>
       </div>
       <button
@@ -30,25 +36,24 @@ export function GlobalNav() {
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
-          <XMarkIcon className="block w-6 text-gray-300" />
+          <XMarkIcon className="block w-6" />
         ) : (
-          <Bars3BottomRightIcon className="block w-6 text-gray-300" />
+          <Bars3BottomRightIcon className="block w-6" />
         )}
       </button>
 
       <div
         className={clsx('overflow-y-auto lg:static lg:block', {
-          'fixed inset-x-0 bottom-0 top-14 mt-px bg-black': isOpen,
+          'fixed inset-x-0 bottom-0 top-14 mt-px bg-white': isOpen,
           hidden: !isOpen,
         })}
       >
-        <nav className="px-1 py-1">
+        <span className="mt-4 px-4 text-xs font-medium uppercase text-gray-600">
+          Topics
+        </span>
+        <nav className="space-y-1 px-1 py-1">
           {AllTopics.map((topic) => {
-            return (
-              <div key={topic.id} className="space-y-1">
-                <GlobalNavItem topic={topic} close={close} />
-              </div>
-            )
+            return <GlobalNavItem key={topic.id} topic={topic} close={close} />
           })}
         </nav>
       </div>
@@ -72,10 +77,10 @@ function GlobalNavItem({
       onClick={close}
       href={href}
       className={clsx(
-        'block rounded-md px-3 py-2 text-sm font-medium  hover:text-gray-300',
+        'block rounded-md px-3 py-2 text-sm font-medium text-black',
         {
-          'text-gray-500 hover:bg-gray-800': !isActive,
-          'text-gray-200': isActive,
+          'bg-gray-200': isActive,
+          'hover:bg-gray-200': !isActive,
         }
       )}
     >
