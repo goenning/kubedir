@@ -9,7 +9,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head />
       <Script type="text/javascript" src="/p.js" data-api="/e" />
       <body className="overflow-y-scroll">
         <GlobalNav />
