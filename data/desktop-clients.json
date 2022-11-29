@@ -17,7 +17,7 @@
     },
     {
       "id": "lens",
-      "title": "lens",
+      "title": "Lens",
       "description": "Lens is the only IDE you'll ever need to take control of your Kubernetes clusters, and any applications.",
       "url": "https://k8slens.dev/"
     },
