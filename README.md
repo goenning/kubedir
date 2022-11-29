@@ -11,7 +11,6 @@ It's not a simple list of tools, it's a comprehensive list of features and compa
 
 ### Roadmap
 
-- Expand to new topics:
 - Add "Features" to each alternative
 - Add option to compare different alternatives
 - Add a global "Search" functionality
@@ -21,3 +20,4 @@ It's not a simple list of tools, it's a comprehensive list of features and compa
   - GitHub stars for open source projects
   - Helm chart downloads/stars for Helm charts
   - Project Health (based on GitHub stats like last release date, number of contributors, commit frequency, open issues)
+- Expand to new topics
