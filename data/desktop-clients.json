@@ -1,5 +1,5 @@
 {
-  "id": "desktop-client",
+  "id": "desktop-clients",
   "title": "Desktop Clients",
   "description": "Inspect and manage your cluster from your machine",
   "items": [
@@ -23,7 +23,7 @@
     },
     {
       "id": "kubernetic",
-      "title": "kubernetic",
+      "title": "Kubernetic",
       "description": "Kubernetic is a brand new Desktop Client for Kubernetes that lets developers and ops manage their Kubernetes cluster(s) through a UI interface in a very simple way.",
       "url": "https://www.kubernetic.com/"
     }
