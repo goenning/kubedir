@@ -1,0 +1,31 @@
+{
+  "id": "desktop-client",
+  "title": "Desktop Clients",
+  "description": "Inspect and manage your cluster from your machine",
+  "items": [
+    {
+      "id": "aptakube",
+      "title": "Aptakube",
+      "description": "A modern, lightweight and multi-cluster desktop client for Kubernetes. Connect to multiple clusters simultaneously, as if it was just one big cluster. View, edit and manage all your resources from your desktop.",
+      "url": "https://aptakube.com"
+    },
+    {
+      "id": "k9s",
+      "title": "k9s",
+      "description": "K9s provides a terminal UI to interact with your Kubernetes clusters. The aim of this project is to make it easier to navigate, observe and manage your applications in the wild.",
+      "url": "https://github.com/derailed/k9s"
+    },
+    {
+      "id": "lens",
+      "title": "lens",
+      "description": "Lens is the only IDE you'll ever need to take control of your Kubernetes clusters, and any applications.",
+      "url": "https://k8slens.dev/"
+    },
+    {
+      "id": "kubernetic",
+      "title": "kubernetic",
+      "description": "Kubernetic is a brand new Desktop Client for Kubernetes that lets developers and ops manage their Kubernetes cluster(s) through a UI interface in a very simple way.",
+      "url": "https://www.kubernetic.com/"
+    }
+  ]
+}

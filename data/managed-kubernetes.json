@@ -6,31 +6,37 @@
     {
       "id": "gcp",
       "title": "Google Kubernetes Engine",
+      "description": "Google Kubernetes Engine (GKE) is a managed, production-ready environment for running containerized applications.",
       "url": "https://cloud.google.com/kubernetes-engine"
     },
     {
       "id": "eks",
       "title": "Elastic Kubernetes Service",
+      "description": "Amazon EKS is a managed Kubernetes service to run Kubernetes in the AWS cloud and on-premises data centers.",
       "url": "https://aws.amazon.com/eks"
     },
     {
       "id": "aks",
       "title": "Azure Kubernetes Service",
+      "description": "Azure Kubernetes Service (AKS) offers the quickest way to start developing and deploying cloud-native apps in Azure, datacenters, or at the edge with built-in code-to-cloud pipelines and guardrails.",
       "url": "https://azure.microsoft.com/en-us/services/kubernetes-service"
     },
     {
       "id": "doks",
       "title": "Digital Ocean Kubernetes",
-      "url": "https://www.digitalocean.com/products/kubernetes"
+      "description": "Business-ready Kubernetes. Scale at a moment's notice with a 99.95% High Availability SLA, free control plane, and low-price bandwidth for CNCF Certified Kubernetes.",
+      "url": "https://www.digitalocean.com/products/kubernetes/"
     },
     {
       "id": "lke",
       "title": "Linode Kubernetes Engine",
+      "description": "LKE is a fully-managed K8s container orchestration engine for deploying and managing containerized applications and workloads.",
       "url": "https://www.linode.com/products/kubernetes"
     },
     {
       "id": "kapsule",
       "title": "Scaleway Kubernetes Kapsule",
+      "description": "Kapsule is a Scaleway's public cloud service, allowing to provision, install, and manage Kubernetes clusters, on demand.",
       "url": "https://www.scaleway.com/en/kubernetes-kapsule"
     }
   ]

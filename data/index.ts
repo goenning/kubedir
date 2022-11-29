@@ -1,7 +1,19 @@
 import ManagedKubernetes from './managed-kubernetes.json'
 import KubernetesDistributions from './kubernetes-distributions.json'
+import IngressControllers from './ingress-controller.json'
+import DesktopClients from './desktop-clients.json'
 
-export const AllTopics: Topic[] = [ManagedKubernetes, KubernetesDistributions]
+const formatTopic = (topic: Topic): Topic => {
+  topic.items.sort((x, y) => (x.title > y.title ? 1 : -1))
+  return topic
+}
+
+export const AllTopics: Topic[] = [
+  formatTopic(ManagedKubernetes),
+  formatTopic(KubernetesDistributions),
+  formatTopic(IngressControllers),
+  formatTopic(DesktopClients),
+]
 
 export type Topic = {
   id: string
@@ -13,5 +25,6 @@ export type Topic = {
 export type TopicItem = {
   id: string
   title: string
+  description?: string
   url: string
 }

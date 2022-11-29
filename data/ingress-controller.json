@@ -1,0 +1,49 @@
+{
+  "id": "ingress-controller",
+  "title": "Ingress Controller",
+  "description": "Choose what proxy to use for ingress traffic.",
+  "items": [
+    {
+      "id": "ingress-nginx",
+      "title": "Ingress-NGINX",
+      "description": "The open source ingress controller based on the open source NGINX server and maintained by the Kubernetes community.",
+      "url": "https://github.com/kubernetes/ingress-nginx"
+    },
+    {
+      "id": "nginx-ingress-controller",
+      "title": "NGINX",
+      "description": "The commercial ingress controller developed and maintained by F5 NGINX.",
+      "url": "https://www.nginx.com/products/nginx-ingress-controller/"
+    },
+    {
+      "id": "projectcontour",
+      "title": "Contour",
+      "description": "Contour is an open source Kubernetes ingress controller providing the control plane for the Envoy edge and service proxy.",
+      "url": "https://projectcontour.io/"
+    },
+    {
+      "id": "istio-ingress",
+      "title": "Istio Ingress",
+      "description": "An open source ingress controller based on Istio. Not to be confused with Istio's Gateway API, which is recommended to make use of the full feature set that Istio offers.",
+      "url": "https://istio.io/latest/docs/tasks/traffic-management/ingress/kubernetes-ingress/"
+    },
+    {
+      "id": "haproxy-ingress",
+      "title": "HAProxy Ingress",
+      "description": "Fast, Reliable and Highly customizable ingress controller based on HAProxy.",
+      "url": "https://haproxy-ingress.github.io/"
+    },
+    {
+      "id": "traefik-ingress",
+      "title": "Traefik Ingress",
+      "description": "An open source ingress controller based on Traefik.",
+      "url": "https://doc.traefik.io/traefik/providers/kubernetes-ingress/"
+    },
+    {
+      "id": "emissary-ingress",
+      "title": "Emissary Ingress",
+      "description": "Emissary-Ingress is an open-source Kubernetes-native API Gateway + Layer 7 load balancer + Kubernetes Ingress built on Envoy Proxy. Emissary-ingress is a CNCF incubation project (and was formerly known as Ambassador API Gateway).",
+      "url": "https://github.com/emissary-ingress/emissary"
+    }
+  ]
+}

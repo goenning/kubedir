@@ -12,7 +12,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         <span className="text-xl text-gray-800">{topic.title}</span>
         <p className="text-sm text-gray-600">{topic.description}</p>
       </div>
-      <div className="mt-2 grid max-w-4xl grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-2 grid max-w-6xl grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {topic.items.map((item) => (
           <Card key={item.id} topic={topic} item={item} />
         ))}

@@ -1,21 +1,24 @@
 {
   "id": "kubernetes-distributions",
   "title": "Kubernetes Distributions",
-  "description": "Did you know there are many Kubernetes distributions to choose from?",
+  "description": "There are many Kubernetes distributions to choose from.",
   "items": [
     {
       "id": "k8s",
       "title": "Kubernetes",
+      "description": "Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.",
       "url": "https://kubernetes.io"
     },
     {
       "id": "k3s",
       "title": "K3S",
+      "description": "The lightweight, highly available, certified Kubernetes distribution built for IoT & Edge computing.",
       "url": "https://k3s.io"
     },
     {
       "id": "microk8s",
       "title": "microk8s",
+      "description": "MicroK8s is the simplest production-grade conformant K8s. Lightweight and focused. Single command install on Linux, Windows and macOS.",
       "url": "https://microk8s.io"
     }
   ]
