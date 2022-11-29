@@ -4,11 +4,13 @@
 
 Visit https://kubedir.com to see the directory.
 
+We value quality over quantity.
+
 This is a work in progress. Please contribute!
 
 ### Roadmap
 
-- Expand to new topics;
+- Expand to new topics:
 - Add "Features" to each alternative
 - Add option to compare different alternatives
 - Add a global "Search" functionality
