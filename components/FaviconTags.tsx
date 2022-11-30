@@ -1,6 +1,8 @@
 export default function FaviconTags() {
   return (
     <>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"

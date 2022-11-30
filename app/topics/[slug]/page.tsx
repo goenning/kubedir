@@ -1,5 +1,5 @@
-import { Card } from '../../../components/Card'
-import { AllTopics } from '../../../data'
+import { Card } from '@components/Card'
+import { AllTopics } from '@data'
 
 export default function Page({ params }: { params: { slug: string } }) {
   const topic = AllTopics.find((topic) => topic.id === params.slug)
