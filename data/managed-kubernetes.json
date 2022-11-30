@@ -2,18 +2,66 @@
   "id": "managed-kubernetes",
   "title": "Managed Kubernetes",
   "description": "Hassle-free Kubernetes clusters so you can focus on your business.",
+  "features": {
+    "max-pods-per-node": {
+      "title": "Max Pods per Node",
+      "description": "The maximum number of pods that can run on a node."
+    },
+    "free-control-plane": {
+      "title": "Free Control Plane",
+      "description": "Is the control plane free? Some providers might charge for the control plane."
+    },
+    "control-plane-sla": {
+      "title": "Control Plane SLA",
+      "description": "What's the SLA for the managed control plane."
+    },
+    "cloud-load-balancer": {
+      "title": "Cloud Load Balancer",
+      "description": "Does it support a fully-managed cloud load balancer?"
+    },
+    "cluster-autoscaling": {
+      "title": "Cluster Autoscaling",
+      "description": "Does it support autoscaling of cluster node pools?"
+    },
+    "private-cluster": {
+      "title": "Private Cluster",
+      "description": "Can the API Server be hidden behind a private network?"
+    },
+    "terraform": {
+      "title": "Supports Terraform",
+      "description": "Can Terraform be used to provision the cluster?"
+    }
+  },
   "items": [
     {
       "id": "gcp",
       "title": "Google Kubernetes Engine",
       "description": "Google Kubernetes Engine (GKE) is a managed, production-ready environment for running containerized applications.",
-      "url": "https://cloud.google.com/kubernetes-engine"
+      "url": "https://cloud.google.com/kubernetes-engine",
+      "features": {
+        "max-pods-per-node": "110",
+        "free-control-plane": "Yes",
+        "control-plane-sla": "99.9%",
+        "cloud-load-balancer": "Yes",
+        "cluster-autoscaling": "Yes",
+        "private-cluster": "Yes",
+        "terraform": "Yes"
+      }
     },
     {
       "id": "eks",
       "title": "Elastic Kubernetes Service",
       "description": "Amazon EKS is a managed Kubernetes service to run Kubernetes in the AWS cloud and on-premises data centers.",
-      "url": "https://aws.amazon.com/eks"
+      "url": "https://aws.amazon.com/eks",
+      "features": {
+        "max-pods-per-node": "110",
+        "free-control-plane": "No",
+        "control-plane-sla": "99.9%",
+        "cloud-load-balancer": "Yes",
+        "cluster-autoscaling": "Yes",
+        "private-cluster": "Yes",
+        "terraform": "Yes"
+      }
     },
     {
       "id": "aks",

@@ -15,13 +15,13 @@ export default function Home() {
       </div>
       <div className="mt-10 space-y-8">
         {AllTopics.map((topic) => (
-          <Fragment key={topic.id}>
+          <div key={topic.id}>
             <div className="relative">
               <h2 className="font-medium text-gray-800">{topic.title}</h2>
               <p className="text-sm text-gray-600">{topic.description}</p>
             </div>
             <CardGrid key={topic.id} topic={topic} items={topic.items} />
-          </Fragment>
+          </div>
         ))}
       </div>
     </>

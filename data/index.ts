@@ -19,7 +19,13 @@ export type Topic = {
   id: string
   title: string
   description: string
-  items: Array<TopicItem>
+  features?: Record<string, TopicFeature>
+  items: TopicItem[]
+}
+
+export type TopicFeature = {
+  title: string
+  description: string
 }
 
 export type TopicItem = {
@@ -27,4 +33,5 @@ export type TopicItem = {
   title: string
   description?: string
   url: string
+  features?: Record<string, string>
 }

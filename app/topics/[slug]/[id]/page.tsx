@@ -42,6 +42,41 @@ export default function Page({
       </div>
 
       <div className="mt-10">
+        <h2 className="font-medium text-gray-800">Features</h2>
+      </div>
+      {!topic.features && (
+        <span className="text-sm text-gray-600">
+          This topic does not have any features yet.
+        </span>
+      )}
+      <table>
+        <tbody>
+          {Object.entries(topic.features || {}).map(([key, feature], idx) => (
+            <tr
+              key={key}
+              className={`border border-gray-500 ${
+                idx % 2 === 0 ? '' : 'bg-gray-100'
+              }`}
+            >
+              <td className="p-2">
+                <span className="text-sm">{feature.title}</span>
+                <span className="block text-xs text-gray-600">
+                  {feature.description}
+                </span>
+              </td>
+              <td className="min-w-[4rem] p-2 text-center">
+                {item.features?.[key] || (
+                  <span className="border-b border-dashed border-gray-600 text-sm text-gray-600">
+                    Unknown
+                  </span>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <div className="mt-10">
         <h2 className="font-medium text-gray-800">
           Alternatives to {item.title}:
         </h2>
