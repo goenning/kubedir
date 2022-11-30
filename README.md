@@ -19,3 +19,4 @@ It's not a simple list of tools, it's a comprehensive list of features and compa
   - Helm chart downloads/stars for Helm charts
   - Project Health (based on GitHub stats like last release date, number of contributors, commit frequency, open issues)
 - Expand to new topics
+- Dark Mode
