@@ -1,4 +1,5 @@
 import { Topic, TopicItem } from '@data'
+import Link from 'next/link'
 import { Icon } from './Icon'
 
 type Props = {
@@ -8,7 +9,7 @@ type Props = {
 
 export function Card(props: Props) {
   return (
-    <a
+    <Link
       key={props.item.id}
       href={`/topics/${props.topic.id}/${props.item.id}`}
       className="relative flex cursor-pointer items-start space-x-3 rounded border border-gray-300 px-2 py-2 shadow-sm focus-within:ring-indigo-700 hover:border-gray-400"
@@ -22,6 +23,6 @@ export function Card(props: Props) {
         </h3>
         <p className="text-sm text-gray-500">{props.item.description}</p>
       </div>
-    </a>
+    </Link>
   )
 }
