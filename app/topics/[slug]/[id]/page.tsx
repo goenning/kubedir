@@ -1,3 +1,4 @@
+import { CardGrid } from '@components/CardGrid'
 import { Icon } from '@components/Icon'
 import { AllTopics } from '@data'
 import { isPropertySignature } from 'typescript'
@@ -13,6 +14,8 @@ export default function Page({
   const item = topic.items.find((item) => item.id === params.id)
   if (!item) return null
 
+  const otherAlternatives = topic.items.filter((i) => i.id !== item.id)
+
   return (
     <>
       <div className="flex">
@@ -26,17 +29,25 @@ export default function Page({
           </h1>
         </div>
       </div>
+
       <div className="mt-2 max-w-4xl">
         <p className="text-md">{item.description}</p>
         <a
           rel="noreferrer noopener"
           target="_blank"
-          className="hover:text-blue:800 text-sm text-blue-500 hover:underline"
+          className="text-sm text-blue-600 hover:underline"
           href={item.url}
         >
           {item.url}
         </a>
       </div>
+
+      <div className="mt-10">
+        <h2 className="font-medium text-gray-800">
+          Alternatives to {item.title}:
+        </h2>
+      </div>
+      <CardGrid topic={topic} items={otherAlternatives} />
     </>
   )
 }
