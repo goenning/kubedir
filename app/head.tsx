@@ -6,7 +6,7 @@ export default function Head() {
     <>
       <SEOTags
         title="Discover your next Kubernetes tool - Kubedir"
-        description="Compare and discover new tools to help you learn and manage Kubernetes cluster."
+        description="Compare and discover new Kubernetes tools, services and resources."
         url="https://kubedir.com"
       />
       <FaviconTags />

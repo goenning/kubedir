@@ -1,7 +1,6 @@
 import { CardGrid } from '@components/CardGrid'
 import { Icon } from '@components/Icon'
 import { AllTopics } from '@data'
-import { isPropertySignature } from 'typescript'
 
 export default function Page({
   params,
