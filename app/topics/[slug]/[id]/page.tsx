@@ -2,6 +2,15 @@ import { CardGrid } from '@components/CardGrid'
 import { Icon } from '@components/Icon'
 import { AllTopics } from '@data'
 
+export async function generateStaticParams() {
+  return AllTopics.flatMap((topic) => {
+    return topic.items.map((item) => ({
+      slug: topic.id,
+      id: item.id,
+    }))
+  })
+}
+
 export default function Page({
   params,
 }: {
